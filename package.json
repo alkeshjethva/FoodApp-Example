@@ -13,6 +13,7 @@
     "@fortawesome/fontawesome-svg-core": "^1.2.30",
     "@fortawesome/free-solid-svg-icons": "^5.14.0",
     "@fortawesome/react-native-fontawesome": "^0.2.5",
+    "@react-native-community/async-storage": "^1.11.0",
     "@react-native-community/masked-view": "^0.1.10",
     "@react-navigation/bottom-tabs": "^5.7.2",
     "@react-navigation/drawer": "^5.8.5",
@@ -26,6 +27,7 @@
     "react-native-reanimated": "^1.9.0",
     "react-native-safe-area-context": "^3.1.1",
     "react-native-screens": "^2.9.0",
+    "react-native-splash-screen": "^3.2.0",
     "react-native-svg": "^12.1.0",
     "react-native-table-component": "^1.2.1",
     "react-native-vector-icons": "^7.0.0",
@@ -42,7 +44,8 @@
     "eslint": "6.8.0",
     "jest": "25.5.4",
     "metro-react-native-babel-preset": "0.59.0",
-    "react-test-renderer": "16.13.1"
+    "react-test-renderer": "16.13.1",
+    "redux-logger": "^3.0.6"
   },
   "jest": {
     "preset": "react-native"

@@ -16,6 +16,21 @@ const Footer = (props) => {
         }
     }
 
+    const gpay = () => {
+        Alert.alert('Succesful', `You debited ₹ ${props.totalPrice}/- via Google pay`)
+
+    }
+
+    const phonepay = () => {
+        Alert.alert('Succesful', `You debited ₹ ${props.totalPrice}/- via PhonePe `)
+
+    }
+
+    const paytm = () => {
+        Alert.alert('Succesful', `You debited ₹ ${props.totalPrice}/- via Paytm`)
+
+    }
+
     return (
         <View style={styles.footerView}>
             <Text style={styles.footerText}> Payable: ₹ {props.totalPrice}/- </Text>
@@ -28,22 +43,13 @@ const Footer = (props) => {
                     </View>
 
                     <ScrollView style={styles.payBtnModal} showsVerticalScrollIndicator={false}>
-                        <TouchableOpacity style={styles.BtnModal} onPress={() => Alert.alert('Succesful', `You debited ₹ ${props.totalPrice}/- via Google pay`)}>
+                        <TouchableOpacity style={styles.BtnModal} drawerClose={props.drawerClose} onPress={gpay} >
                             <Text style={styles.footerTextModal}>Google Pay</Text>
                         </TouchableOpacity>
-                        <TouchableOpacity style={styles.BtnModal} onPress={() => Alert.alert('Succesful', `You debited ₹ ${props.totalPrice}/- via PhonePe `)}>
+                        <TouchableOpacity style={styles.BtnModal} drawerClose={props.drawerClose} onPress={phonepay}>
                             <Text style={styles.footerTextModal}>PhonePe</Text>
                         </TouchableOpacity>
-                        <TouchableOpacity style={styles.BtnModal} onPress={() => Alert.alert('Succesful', `You debited ₹ ${props.totalPrice}/- via Paytm`)}>
-                            <Text style={styles.footerTextModal}>Paytm</Text>
-                        </TouchableOpacity>
-                        <TouchableOpacity style={styles.BtnModal} onPress={() => Alert.alert('Succesful', `You debited ₹ ${props.totalPrice}/- via Google pay`)}>
-                            <Text style={styles.footerTextModal}>Google Pay</Text>
-                        </TouchableOpacity>
-                        <TouchableOpacity style={styles.BtnModal} onPress={() => Alert.alert('Succesful', `You debited ₹ ${props.totalPrice}/- via PhonePe `)}>
-                            <Text style={styles.footerTextModal}>PhonePe</Text>
-                        </TouchableOpacity>
-                        <TouchableOpacity style={styles.BtnModal} onPress={() => Alert.alert('Succesful', `You debited ₹ ${props.totalPrice}/- via Paytm`)}>
+                        <TouchableOpacity style={styles.BtnModal} drawerClose={props.drawerClose} onPress={paytm}>
                             <Text style={styles.footerTextModal}>Paytm</Text>
                         </TouchableOpacity>
                     </ScrollView>

@@ -6,10 +6,16 @@ import { FontAwesomeIcon } from '@fortawesome/react-native-fontawesome';
 import { faArrowLeft } from '@fortawesome/free-solid-svg-icons';
 
 const DrawerContent = ({ navigation }) => {
+
+    onCloseDrawer = () => {
+        navigation.closeDrawer()
+        navigation.navigate('Home')
+    }
+
     return (
         <View style={styles.drawerContainer} >
             <View >
-                <TouchableOpacity onPress={() => navigation.closeDrawer()}  >
+                <TouchableOpacity onPress={onCloseDrawer}  >
                     <Text style={styles.DrawerTextClose} ><FontAwesomeIcon
                         icon={faArrowLeft}
                         color={'silver'}
@@ -20,9 +26,7 @@ const DrawerContent = ({ navigation }) => {
 
             </View>
             <View style={{ flex: 1, marginTop: 10 }}>
-                <TouchableOpacity style={styles.DrawerList} onPress={() => navigation.navigate('Home')} >
-                    <Text style={styles.DrawerListText}>Home</Text>
-                </TouchableOpacity>
+
                 <TouchableOpacity style={styles.DrawerList} onPress={() => navigation.navigate('Notification')} >
                     <Text style={styles.DrawerListText}>Notification</Text>
                 </TouchableOpacity>

@@ -1,4 +1,4 @@
-import React, { Component } from 'react';
+import React, { useEffect } from 'react';
 import { View, Button } from 'react-native';
 import Header from '../Components/Header'
 import { styles } from '../Styles'

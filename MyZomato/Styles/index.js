@@ -225,7 +225,29 @@ export const styles = StyleSheet.create({
     DrawerFooter: {
         color: 'silver',
         fontFamily: 'Poppins-Medium',
-    }
+    },
+
+
+
+    // DashBoard
+
+    // dashBoardContainer: {
+    //     flex: 1,
+    //     backgroundColor: '#212121',
+    // },
+
+    // container: {
+    //     backgroundColor: '#303030',
+    //     height: 170,
+    //     width: 170,
+    //     borderRadius: 5
+    // },
+    // gridContaiiner: {
+    //     flexDirection: 'row',
+    //     justifyContent: 'space-evenly',
+    //     marginVertical: 10
+
+    // }
 
 
 })

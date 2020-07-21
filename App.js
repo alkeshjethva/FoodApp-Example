@@ -25,34 +25,28 @@
 
 // ............................................................
 
-import React from 'react';
+import React, { useEffect } from 'react';
 import 'react-native-gesture-handler';
-import Home from './MyZomato/Screens/Home';
+import Navigation from './MyZomato/Navigation/Navigation/Navigation';
+
+import { persistor, store } from './MyZomato/Redux/Store/Store';
+import { PersistGate } from 'redux-persist/integration/react'
 import { Provider } from 'react-redux';
-import Store from './MyZomato/Redux/Store/Store';
-import { NavigationContainer } from '@react-navigation/native'
-import { createDrawerNavigator } from '@react-navigation/drawer'
-import Settings from './MyZomato/Screens/Settings'
-import Profile from './MyZomato/Screens/Profile'
-import Notification from './MyZomato/Screens/Notification'
-import DrawerContent from './MyZomato/Navigation/Drawer/DrawerContent'
 
 
-const Drawer = createDrawerNavigator();
+import SplashScreen from 'react-native-splash-screen'
+
 const App = () => {
+
+  useEffect(() => {
+    SplashScreen.hide()
+  })
+
   return (
-    <Provider store={Store}>
-      <NavigationContainer >
-        <Drawer.Navigator
-          drawerContent={props => <DrawerContent {...props} />}
-          drawerType="slide"
-          drawerPosition={"right"}>
-          <Drawer.Screen name="Home" component={Home} />
-          <Drawer.Screen name="Settings" component={Settings} />
-          <Drawer.Screen name="Notification" component={Notification} />
-          <Drawer.Screen name="Profile" component={Profile} />
-        </Drawer.Navigator>
-      </NavigationContainer>
+    <Provider store={store}>
+      <PersistGate persistor={persistor}>
+        <Navigation />
+      </PersistGate>
     </Provider>
 
   )
