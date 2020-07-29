@@ -161,7 +161,7 @@ const HomeScreen = ({ navigation }) => {
             <HeaderComponent
                 title="Foods"
                 leftSource={require('./Images/icon.png')}
-                onLeftPress={() => navigation.openDrawer()} />
+                navigation={navigation} />
             <View style={styles.container}>
                 <FlatList
                     showsVerticalScrollIndicator={false}

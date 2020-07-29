@@ -73,12 +73,12 @@
 import React from 'react'
 import { View, Text, StatusBar, TouchableOpacity, Image, StyleSheet } from 'react-native';
 
-const HeaderComponent = (props) => {
+const HeaderComponent = (props, { navigation }) => {
     return (
         <View style={styles.container}>
             <StatusBar backgroundColor={'#303030'} />
             <View style={styles.headerView}>
-                <TouchableOpacity style={styles.headerLeft} onPress={props.onLeftPress} >
+                <TouchableOpacity style={styles.headerLeft} onPress={() => navigation.openDrawer()}>
                     <Image source={props.leftSource} style={styles.headerLeftImage} />
                 </TouchableOpacity>
                 <View style={[styles.headerCenter, { alignItems: props.alignItems }]} >
