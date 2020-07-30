@@ -1,15 +1,12 @@
-import React from 'react';
-import DrawerNavigation from './src/Navigations/StackNavigation'
-import { NavigationContainer } from '@react-navigation/native'
-
-// import TabNavigation from './React-navigation/TabNavigation'
+import React, { useState } from 'react'
+import { View, ActivityIndicator } from 'react-native'
 import NavigationV5 from './NavigationV5/Navigation'
+
 const App = () => {
+
+
+
   return (
-    // <NavigationContainer>
-    //   <DrawerNavigation />
-    // </NavigationContainer>
-    // <TabNavigation />
     <NavigationV5 />
   )
 }
